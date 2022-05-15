@@ -20,6 +20,8 @@ composer require "super-eggs/dcat-distpicker:^2.0"
 
 然后: (dcat-admin 2.x 无需执行!!!)
 
+php artisan vendor:publish --provider="Wangcong\DcatDistpicker\DcatDistpickerServiceProvider" --force
+
 ```shell script
 php artisan admin:import dcat-distpicker
 ```

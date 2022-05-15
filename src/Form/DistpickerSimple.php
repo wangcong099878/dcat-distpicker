@@ -5,12 +5,12 @@ namespace Wangcong\DcatDistpicker\Form;
 use Dcat\Admin\Form\Field;
 use Illuminate\Support\Arr;
 
-class Distpicker extends Field
+class DistpickerSimple extends Field
 {
     /**
      * @var string
      */
-    protected $view = 'china-distpicker::select';
+    protected $view = 'china-distpicker::select_simple';
 
     /**
      * @var array
@@ -22,7 +22,7 @@ class Distpicker extends Field
     /**
      * @var array
      */
-    protected $columnKeys = ['province', 'city', 'district'];
+    protected $columnKeys = ['province', 'city'];
 
     /**
      * @var array
@@ -93,7 +93,7 @@ class Distpicker extends Field
 
         $province = old($this->column['province'], Arr::get($this->value(), 'province')) ?: Arr::get($this->placeholder, 'province');
         $city     = old($this->column['city'],     Arr::get($this->value(), 'city'))     ?: Arr::get($this->placeholder, 'city');
-        $district = old($this->column['district'], Arr::get($this->value(), 'district')) ?: Arr::get($this->placeholder, 'district');
+        //$district = old($this->column['district'], Arr::get($this->value(), 'district')) ?: Arr::get($this->placeholder, 'district');
 
         $id = uniqid('distpicker-');
 
@@ -103,8 +103,7 @@ var oid = '{$id}',
 $('label[for=' + oid + ']').attr('for', nid);
 $('#' + oid).attr('id', nid).distpicker({
   province: '$province',
-  city: '$city',
-  district: '$district'
+  city: '$city'
 });
 EOT;
         $this->addVariables(compact('id'));

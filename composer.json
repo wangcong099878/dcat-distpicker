@@ -4,11 +4,11 @@
     "alias": "省市区三级联动组件",
     "type": "library",
     "keywords": ["dcat-admin", "extension", "distpicker"],
-    "homepage": "https://github.com/super-eggs/dcat-distpicker",
+    "homepage": "https://github.com/wangcong099878/dcat-distpicker",
     "license": "MIT",
     "authors": [
         {
-            "name": "Wangcong",
+            "name": "wangcong",
             "email": "251957448@qq.com"
         }
     ],
@@ -22,7 +22,6 @@
         }
     },
     "extra": {
-        "dcat-admin": "Wangcong\\DcatDistpicker\\DcatDistpickerServiceProvider",
         "laravel": {
             "providers": [
                 "Wangcong\\DcatDistpicker\\DcatDistpickerServiceProvider"
